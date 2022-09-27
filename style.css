@@ -1,0 +1,65 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;/*Tudo que for entendido como texto vai ser alinhado ao centro do bloco, porém isso vale para os itens dentro do meu bloco e não para o bloco em si. EX: texto, img.. */
+  margin: 0px;/*Zerando a margin padrão do navegador*/
+}
+
+#hero {
+  width: 592px; /*largura*/
+  margin: 0px auto 72px; /*Para alinhar o meu bloco ao centro da tela*/ /* Com o valor 'auto' o próprio navegador tenta alinhar o bloco no centro da tela, porém só vale para as laterais, não pra cima nem pra baixo.*/
+  /* Nesses casos como o do 'margin' os valores seguem o padrão do relógio, primeiro valor é cima(top), segundo direita(rigth), terceiro baixo(bottom) e quarto esquerda(left).*/ /*Quando colocar só um valor, esse valera para todos*/ 
+  /*Quando forem três valores o do meio será para as laterais e os da ponta cima e baixo.*/
+  /*Quando forem dois valores, o primeiro será para cima e baixo e o segundo para as laterais*/
+}
+
+#hero img {
+  margin-bottom: 72px;
+}
+
+h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 49px; /*tamanho da fonte*/
+  line-height: 56px; /*altura da linha*/
+  font-weight: normal; /*'font-weigth'= peso da fonte. Nesse caso estou tirando o peso(negrito) natural do 'h1'.*/
+  
+  margin-bottom: 32px;
+}
+
+h1 span { /*Sem ',' eu estou procurando uma tag dentro de outra no html, então o efeito do font-weigth vai para o 'span' e não para o 'h1' todo*/
+  font-weight: bold;/*Coloquei o peso somente no na tag 'span' que está dentro do 'h1'. */
+}
+
+span, a { /*Quando coloco uma ',' estou selecionando mais de uma tag no html, então o efeito vai para todas as tags refenciadas.*/
+  color: #FF9900; /*Valor de cor hexadecimal, RGB: sendo dividido em pares, começando com RED,GREEN e BLUE= RGB(indo do 1 ao 9 e A ao F). */
+}
+
+p {
+  color: #7D7987;
+  font-size: 14px;
+  line-height: 28px;
+}
+
+#footer {
+  font-size: 14px;
+  line-height: 28px;
+  margin-bottom: 33px;
+}
+
+#footer a + a { /*O comando está dizendo o seguinte: Vai no 'footer', pegue o 'a' anterior ao 'a' e aplique o valor a seguir.*/
+  margin-left: 28px;
+} /*Eu peguei o segundo 'a' e apliquei uma margem à sua esquerda*//*se tivesse mais 'a' ele iria continuar procurando até encontrar o último 'a' para aplicar o comando*/
+
+
+#line {
+  width: 568px;
+  height: 0px;
+  margin: 0px auto 8px;
+  border: 1px #ECEFF2 solid;
+}
+
+#balls {
+  position: fixed; /*Com a propriedade 'position' eu crio uma nova camada encima do meu body, onde o elemento referenciado irá ficar.*/
+  /*Com o valor 'fixed', o elemento irá ficar fixado na posição que eu definir*//*Quando uso essa propriedade(position), ela me abre outras opções de propriedades a serem usadas*/
+  bottom: 0px;
+  right: 0px;
+}/*O valor 'static'= é o padrão, 'relative'= ele vai ser relativo à alguma coisa, 'fixed'= vai ser fixo, 'absolute'= vai ser absoluto no ponto inicial onde estava quando a pg foi carregada, 'sticky'= Mesma coisa que o 'fixed' só que no centro da pg*/
